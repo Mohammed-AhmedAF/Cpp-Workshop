@@ -5,6 +5,7 @@ using namespace std;
 int main(void)
 {
     //Variable to be used to hold user input
+    //Another comment
     int score{};
 
     cout << "Enter your score on the exam {0-100}" << endl;
