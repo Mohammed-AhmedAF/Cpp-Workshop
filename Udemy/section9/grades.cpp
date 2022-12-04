@@ -6,6 +6,7 @@ int main(void)
 {
     //Variable to be used to hold user input
     //Another comment
+    //Anothter comment to test changing userEmail
     int score{};
 
     cout << "Enter your score on the exam {0-100}" << endl;
