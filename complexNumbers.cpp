@@ -15,8 +15,17 @@ struct ComplexNumber
 			return result;
 		}
 
+		friend std::ostream & operator << (std::ostream & os, const ComplexNumber & complexN);
+
 
 };
+
+std::ostream & operator << (std::ostream & os, const ComplexNumber & complexN)
+{
+	os << "Result is " << complexN.realNum << "+" << complexN.imagNum <<"i" << std::endl;
+
+	return os;
+}
 
 int main(void)
 {
@@ -25,7 +34,7 @@ int main(void)
 	ComplexNumber obj2 = ComplexNumber(3,2);
 
 	ComplexNumber res = obj1 + obj2;
-	std::cout << "Result is " << res.realNum << "+" << res.imagNum <<"i" << std::endl;
+	std::cout << res;
 
 	return 0;
 }
