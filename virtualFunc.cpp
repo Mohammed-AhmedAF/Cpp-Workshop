@@ -8,6 +8,7 @@ class Base
 		Base(int n)
 		{
 			num = n;
+	
 		}
 
 	virtual void sayHello(void)
@@ -28,7 +29,7 @@ class Child : public Base
 		Child (int n) : Base(n)
 		{
 		}
-	void sayHello(void)
+	void sayHello(void) override
 		{
 			std::cout << "Child says hello" << std::endl;
 		}	

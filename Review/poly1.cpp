@@ -36,6 +36,11 @@ class Account
 			return credit;
 		}
 
+		void addCredit(int addValue)
+		{
+			credit += addValue;
+		}
+
 		virtual void showCredit(void)
 		{
 			std::cout << "Account Credit is " << credit << "." << std::endl;
@@ -70,6 +75,7 @@ class Saving : public Account
 
 		virtual void withdraw(void) override
 		{
+			
 			std::cout << "Saving::withdraw" << std::endl;
 		}
 
@@ -106,15 +112,17 @@ class SpecialSaving : public Saving
 {
 	public:
 		SpecialSaving(int cr) : Saving(cr)
-	{
+		{
 	
-	}
+		}	
 		virtual void withdraw(void)
 		{
 			std::cout << "SpecialSaving withdraw" << std::endl;
 		}
 
 };
+
+
 
 
 int main(void)
@@ -134,6 +142,10 @@ int main(void)
 	{
 		account->withdraw();
 	}
+
+	std::cout << "P2 credit is " << p2->getCredit() << std::endl;
+	p2->addCredit(100);
+	std::cout << "P2 credit is  " << p2->getCredit() << std::endl;
 
 	delete p1;
 	delete p2;

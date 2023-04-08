@@ -13,7 +13,7 @@ struct ComplexNumber
 			result.realNum = oper2.realNum + realNum;
 			result.imagNum = oper2.imagNum + imagNum;
 			return result;
-		}
+		}	
 
 		friend std::ostream & operator << (std::ostream & os, const ComplexNumber & complexN);
 
