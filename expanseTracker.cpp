@@ -36,12 +36,12 @@ void displayCommands(void)
 
 void displayTotal(void)
 {
-    int total {0};
+    int totalExpanses {0};
     for (auto expanse : expanses)
     {
-        total += expanse->getAmount();
+        totalExpanses += expanse->getAmount();
     }
-    std::cout << "Total: " <<  total << std::endl;
+    std::cout << "Total: " <<  totalExpanses << std::endl;
 }
 
 void processUserInput(char userInput)
