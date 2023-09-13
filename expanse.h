@@ -12,7 +12,7 @@ class Expanse
         amount = amountParam;
     }
 
-    int getAmount(void)
+    int getAmount (void) const
     {
         return amount;
     }
