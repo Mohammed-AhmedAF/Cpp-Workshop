@@ -2,6 +2,7 @@
 #include <vector>
 #include "expanse.h"
 #include <stdlib.h>
+#include <fmt/color.h>
 
 //Store expanses in this vector
 std::vector<Expanse*> expanses;
@@ -27,11 +28,12 @@ void addExpanse(void)
 
 void displayCommands(void)
 {
+   
     std::cout << "a - Add expanse" << std::endl;
     std::cout << "b - Display total" << std::endl;
     std::cout << "c - Print to file" << std::endl;
-    std::cout << "d - exit" << std::endl;
-
+    fmt::print(fg(fmt::color::crimson) | fmt::emphasis::bold,
+    "d - Exit\r\n");
 }
 
 void displayTotal(void)
